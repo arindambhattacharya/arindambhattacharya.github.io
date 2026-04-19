@@ -1,34 +1,28 @@
 baseURL = "https://arindambhattacharya.github.io/"
-languageCode = "en-us"
+languageCode = "en-US"
 title = "Arindam's Blog"
-theme = "paperesque"
+author = "Arindam Bhattacharya"
 copyright = "© 2026 Arindam Bhattacharya"
-paginate = 10
+theme = "hugo-bearblog"
+enableRobotsTXT = false
 
-[markup]
-  defaultMarkdownHandler = "goldmark"
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
 
-[markup.goldmark.renderer]
-  unsafe = false
+[permalinks]
+  blog = "/:slug/"
+  tags = "/blog/:slug"
 
 [params]
+  description = "Personal blog by Arindam Bhattacharya."
+  title = "Arindam's Blog"
+  dateFormat = "2 January 2006"
+  enablePostNavigator = true
+  hideMadeWithLine = true
 
-  [[params.menu]]
-    name = "Recent Posts"
-    url = "posts/"
-
-  [[params.menu]]
-    name = "Posts by Tag"
-    url = "tags/"
-
-  [[params.menu]]
-    name = "About"
-    url = "about/"
-
-  [[params.topmenu]]
-    name = "rss"
-    url = "posts/index.xml"
-
-  [[params.topmenu]]
-    name = "github"
-    url = "https://github.com/arindambhattacharya"
+[markup]
+  [markup.highlight]
+    style = "friendly"
+    lineNos = true
+    lineNumbersInTable = false
+    codeFences = true
