@@ -1,0 +1,11 @@
+#+title: classifier training time comparison
+#+options: toc:nil html-postamble:nil num:nil
+
+#+caption: Gaussian data
+[[file:gaussian_train_time.png]]
+
+#+caption: Circle data
+[[file:circle_train_time.png]]
+
+#+caption: Moon data
+[[file:moon_train_time.png]]

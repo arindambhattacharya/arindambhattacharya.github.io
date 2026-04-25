@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Arindam Bhattacharya</title>
-    <link>https://www.cse.iitd.ac.in/~arindam/author/arindam-bhattacharya/</link>
-      <atom:link href="https://www.cse.iitd.ac.in/~arindam/author/arindam-bhattacharya/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.cse.iitd.ac.in/author/arindam-bhattacharya/</link>
+      <atom:link href="https://www.cse.iitd.ac.in/author/arindam-bhattacharya/index.xml" rel="self" type="application/rss+xml" />
     <description>Arindam Bhattacharya</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Arindam Bhattacharya</copyright>
     <image>
-      <url>https://www.cse.iitd.ac.in/~arindam/images/icon_hu2bf8392abb58024b63a481c07a2416d6_132000_512x512_fill_lanczos_center_3.png</url>
+      <url>https://www.cse.iitd.ac.in/images/icon_hu2bf8392abb58024b63a481c07a2416d6_132000_512x512_fill_lanczos_center_3.png</url>
       <title>Arindam Bhattacharya</title>
-      <link>https://www.cse.iitd.ac.in/~arindam/author/arindam-bhattacharya/</link>
+      <link>https://www.cse.iitd.ac.in/author/arindam-bhattacharya/</link>
     </image>
     
   </channel>

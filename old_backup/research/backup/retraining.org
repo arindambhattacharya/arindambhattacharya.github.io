@@ -1,0 +1,33 @@
+#+TITLE: Bloom Filter Experiments with Retraining
+#+OPTIONS: toc:nil num:3
+
+** Dataset 
+2D Gaussian Dataset
+
+# #+CAPTION: Dataset
+# #+NAME:   fig:dataset
+# #+ATTR_HTML: width="200"
+# [[./dataset.png]]
+
+** Classifier Used
+SGDClassifier (Logistic regression with stochastic gradient descent training). This is used instead of LogisticRegresssion classifier to support partial retraining.
+
+#+CAPTION: Classifier Probability
+#+NAME:   fig:clf_prob
+#+ATTR_HTML: width="200"
+[[./clf_prob.png]]
+
+** Experiments
+*** Single Classifier with Retraining
+*** Graphs
+#+CAPTION: Initialization time (training and insertion) with data size
+#+ATTR_HTML: width="200"
+[[file:init_time.png]]
+
+#+CAPTION: Space usage with data size
+#+ATTR_HTML: width="200"
+[[file:spaces.png]]
+
+#+CAPTION: Insertion and query times with data size
+#+ATTR_HTML: width="200"
+[[file:retrain_query_insert.png]]

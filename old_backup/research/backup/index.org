@@ -1,0 +1,62 @@
+#+OPTIONS: num:3 toc:nil html-postamble:nil
+#+TITLE: Research
+* [[file:meeting_notes.html][Meeting Notes]]
+# * All Graphs
+# ** [[file+sys:graphs/][All graphs dump]]
+# * Problem descriptions
+# ** Bloom Classifier
+#    - [[file:description_v2.html][Version 2]]
+#    - [[http://www.cse.iitd.ac.in/~arindam/research/description_v1.html][Version 1]]
+#    - [[file:ref.html][References]]
+# * Experiments
+# ** Complexity experiments
+# *** Motivation
+# These experiments are to determine how different classifier behaves with different datasets. The goal is to find a relation among classifiers and datasets based on: the time taken for training and testing, accuracy achieved by the classifiers and the model sizes.
+# *** [[file:comp_datasets.html][Datasets]]
+# *** [[file:comp_res.html][Results]]
+# ** Data sets of varying distances
+# *** Motivation
+#     - Distance between the distribution of different classes in the data may have major impact on the performance. For example, if the classes are too close, many classifier false negatives may occur, requiring larger bloom filter.
+#     - Different types of classifiers may produce different results for data set of different distances. For example, if the distance is large, a neural network and a simple logistic regression may perform equally well, but for closer data neural network may perform considerably better.
+# *** Experiment Outline
+#     - Both retraining and DPBF are performed of 6 different data sets with different distances and 4 different classes of classifiers.
+# *** [[file:distances.html][Details]]
+# ** With retraining
+# *** Single classifier and bloom filter
+# **** Experiment outline
+#     - Classifier is trained from the initial data
+#     - All the false negatives from the classifier are inserted into the overflow Bloom filter
+#     - With every batch of new data, we retrain the classifier online
+#     - New false negatives from the new batch is inserted into the overflow Bloom filter
+#     - For the experiment, new batches are i. sampled uniformly, and ii. sampled from clusters
+# **** Issues
+#     - Up on retraining, old data may become a false negative. Since we don't have access to the old data, this cannot be inserted into the overflow Bloom filter and therefore becomes false negative of the entire data structure
+#     - As a solution, we chose to i. retain the old classifiers, or ii. store old data from a band around the classifier's boundary and detect when a classifier goes bad
+# **** [[./retraining.html][Details]]
+# *** Union of classifiers
+# **** Experiment outline
+#     - Classifier is trained from the initial data
+#     - All the false negatives from the classifier are inserted into the overflow Bloom filter
+#     - With every batch of new data, we **make a copy of previous classifier** and retrain the classifier online
+#     - New false negatives, //which must now be false negatives of all the classifiers//, is inserted into overflow Bloom filter
+#     - This increases the storage
+#     - Optimization: On addition of each new classifier, discard the classifiers dominated by it. This means that we need to maintain the outermost frontier of the union of these classifiers
+# *** Detecting failure of classifier
+# **** Experiment outline
+#     - Classifier is trained from the initial data
+#     - All the false negatives from the classifier are inserted into the overflow Bloom filter
+#     - We **store elements within a band around the classifier's boundary**, i.e. elements which are classified with low confidence
+#     - With every new batch of data, we retain the classifier.
+#     - New false negatives from the new batch is inserted into the overflow Bloom filter
+#     - Using the stored data from the band, //we verify that there are no old data that becomes false negative with the new classfier//
+#     - If there is, rebuild a new classifier using i. retraining with new data, which is similar to Union of classfiers or ii. entire data from database
+#     - With enough data in the band, rebuilding of classifier could be rare enough to justify the above methods.
+# ** Without retraining
+# *** Experiment Outline
+#     - Classifier is trained on the initial data
+#     - All the false negatives from the classifier are inserted into the overflow Bloom filter which is now DPBF
+#     - During run time, we insert elements of insert operations directly into the DPBF
+#     - Note that classifier, once trained, does not require retraining
+# *** [[./dpbf.html][Details]]
+# * Graph archive
+#   - [[./graphs/][Old graphs]]

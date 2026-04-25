@@ -1,0 +1,46 @@
+#+TITLE: DPBF Experiments
+#+OPTIONS: toc:nil num:3
+
+* Logistic Classifier + DPBF
+
+** Dataset 
+2D Gaussian Dataset
+
+#+CAPTION: Dataset
+#+NAME:   fig:dataset
+#+ATTR_HTML: width="200"
+[[./dataset.png]]
+
+** Classifier Used 
+Logistic Regression
+#+CAPTION: Classifier Probability
+#+NAME:   fig:clf_prob
+#+ATTR_HTML: width="200"
+[[./clf_prob.png]]
+
+** Experiment
+1. Initially we trained our system (dpbf + classifier) on N elements (N can be 1000,100000....500000).
+2. We calculated the insertion time and the query time as follows:
+  - **Insertion time** : It is the total time required to query the element in the classifier and adding the element to the DPBF, if required. If the initial set size is N, we will insert N/10 elements into bloom classifier. We inserted elements 4 times in chunks of N/10 to find the average insertion time. The average insertion time in average of entries of column 4.
+
+#+CAPTION: Details
+#+NAME:   fig:table
+#+ATTR_HTML: width="200"
+[[./table.png]]
+
+
+  - **Query time** : Time required to query  points. The system was queried for both positive as well as negative examples.We calculate the time 5 times and took average. We define set size as the number of elements in the bloom classifier at a particular time, for eg: for first insetion set size is N + N/10, for second insertion set size is N + 2xN/10. We queried the bloom classifier on 2xset_size data points to find the average query time. The average insertion time in average of entries of column 3 .
+
+** Graphs
+#+CAPTION: Average insetion time
+[[./insertion_time.PNG]]
+
+#+CAPTION: Average query time
+[[./query_time.PNG]]
+
+#+CAPTION: Average time [80% query 20% insertion]
+[[./total_query_time.PNG]]
+
+#+CAPTION: Memory
+[[./memory.png]]
+

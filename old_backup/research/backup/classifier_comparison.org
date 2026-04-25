@@ -1,0 +1,5 @@
+#+TITLE: Classifier Comparisions
+
+#+CAPTION: Classifier performances for various classifiers and data distributions
+#+NAME:   fig:clf
+[[file:classifier_comparison.png]]

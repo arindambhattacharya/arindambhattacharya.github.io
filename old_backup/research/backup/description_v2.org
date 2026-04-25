@@ -1,0 +1,25 @@
+#+HTML_MATHJAX: align: left indent: 5em tagside: left font: Neo-Euler
+#+OPTIONS: num:nil toc:nil html-postamble:nil
+#+TITLE: Problem Description v2
+
+** What?
+- A data structure called <<name>> consisting of a Bloom filter augmented with a classifier.
+- Classifier is trained on available data. Classifier false negatives are fed into the Bloom filter.
+- Membership query is passed to the classifier. If the classifier returns True, <<name>> returns True.
+- Otherwise, the Bloom filter is consulted, and its return value is returned by the <<name>>.
+
+** Why?
+- [X] No false negatives.
+- [X] Less memory consumption than vanilla Bloom filter.
+- [X] Comparable query time and false positive rates.
+- [ ] Flexibility of choosing performance/resource trade-off.
+
+** Questions to be answered
+- [ ] What kind of classifier is suitable for what kind of data?
+- [ ] What are the trade-offs? How less memory? How more time?
+- [ ] How bad is the FPR performance? How does is change over time?
+- [ ] How much does using DPBF help?
+
+** Additional issues to explore
+- [ ] It is a membership query. What about the entire positive region of classifier that are not in Bloom filter?
+- [ ] Overfitting a sufficiently complex classifier may mitigate the above issue, but at what cost?
