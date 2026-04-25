@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-03-11 Wed 09:23 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Meeting Notes</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Arindam Bhattacharya" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&dn=gpl-3.0.txt GPL-v3-or-Later
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.cacheClassElem = elem.className;
+         elem.cacheClassTarget = target.className;
+         target.className = "code-highlighted";
+         elem.className   = "code-highlighted";
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(elem.cacheClassElem)
+         elem.className = elem.cacheClassElem;
+       if(elem.cacheClassTarget)
+         target.className = elem.cacheClassTarget;
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Meeting Notes</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0617158">Meeting Notes</a>
+<ul>
+<li><a href="#org9996748"><span class="timestamp-wrapper"><span class="timestamp">[2020-03-11 Wed]</span></span></a></li>
+<li><a href="#org7988e41"><span class="timestamp-wrapper"><span class="timestamp">[2020-03-04 Wed]</span></span></a></li>
+<li><a href="#org68e4825"><span class="timestamp-wrapper"><span class="timestamp">[2020-02-26 Wed]</span></span></a></li>
+<li><a href="#org374ba67"><span class="timestamp-wrapper"><span class="timestamp">[2020-02-19 Wed]</span></span></a></li>
+<li><a href="#orge343ccf"><span class="timestamp-wrapper"><span class="timestamp">[2020-02-12 Wed]</span></span></a></li>
+<li><a href="#org020f9c8"><span class="timestamp-wrapper"><span class="timestamp">[2020-02-05 Wed]</span></span></a></li>
+<li><a href="#org93e4287"><span class="timestamp-wrapper"><span class="timestamp">[2020-01-29 Wed]</span></span></a></li>
+<li><a href="#org049955c"><span class="timestamp-wrapper"><span class="timestamp">[2020-01-25 Sat]</span></span></a></li>
+<li><a href="#org7cf8d27"><span class="timestamp-wrapper"><span class="timestamp">[2019-12-17 Tue]</span></span></a></li>
+<li><a href="#org1e75a63"><span class="timestamp-wrapper"><span class="timestamp">[2019-12-10 Tue]</span></span></a></li>
+<li><a href="#org251f609"><span class="timestamp-wrapper"><span class="timestamp">[2019-12-09 Mon]</span></span></a></li>
+<li><a href="#orge315d5e"><span class="timestamp-wrapper"><span class="timestamp">[2019-12-05 Thu]</span></span></a></li>
+<li><a href="#org3d29cbc"><span class="timestamp-wrapper"><span class="timestamp">[2019-11-29 Fri]</span></span></a></li>
+<li><a href="#org050d9d9"><span class="timestamp-wrapper"><span class="timestamp">[2019-11-27 Wed]</span></span></a></li>
+<li><a href="#orgfa586b3"><span class="timestamp-wrapper"><span class="timestamp">[2019-11-19 Tue]</span></span></a></li>
+<li><a href="#orga14912e"><span class="timestamp-wrapper"><span class="timestamp">[2019-11-16 Sat]</span></span></a></li>
+<li><a href="#org7153658"><span class="timestamp-wrapper"><span class="timestamp">[2019-11-14 Thu]</span></span></a></li>
+<li><a href="#org69b0d9c"><span class="timestamp-wrapper"><span class="timestamp">[2019-11-12 Tue]</span></span></a></li>
+<li><a href="#org518c5f4"><span class="timestamp-wrapper"><span class="timestamp">[2019-11-05 Tue]</span></span></a></li>
+<li><a href="#orgf8fc5e5"><span class="timestamp-wrapper"><span class="timestamp">[2019-11-04 Mon]</span></span></a></li>
+<li><a href="#org81e4ef1"><span class="timestamp-wrapper"><span class="timestamp">[2019-10-29 Tue]</span></span></a></li>
+<li><a href="#orgc022994"><span class="timestamp-wrapper"><span class="timestamp">[2019-10-22 Tue]</span></span></a></li>
+<li><a href="#org27e62d9"><span class="timestamp-wrapper"><span class="timestamp">[2019-10-15 Tue]</span></span></a></li>
+<li><a href="#org41474f4"><span class="timestamp-wrapper"><span class="timestamp">[2019-10-08 Tue]</span></span></a></li>
+<li><a href="#orga34208c"><span class="timestamp-wrapper"><span class="timestamp">[2019-10-01 Tue]</span></span></a></li>
+<li><a href="#org66b2973"><span class="timestamp-wrapper"><span class="timestamp">[2019-09-26 Thu]</span></span></a></li>
+<li><a href="#orgb147930"><span class="timestamp-wrapper"><span class="timestamp">[2019-09-24 Tue]</span></span></a></li>
+<li><a href="#org5325423"><span class="timestamp-wrapper"><span class="timestamp">[2019-09-17 Tue]</span></span></a></li>
+<li><a href="#org89a6cde"><span class="timestamp-wrapper"><span class="timestamp">[2019-09-10 Tue]</span></span></a></li>
+<li><a href="#org2fed90b"><span class="timestamp-wrapper"><span class="timestamp">[2019-09-03 Tue]</span></span></a></li>
+<li><a href="#org03335c6"><span class="timestamp-wrapper"><span class="timestamp">[2019-08-27 Tue]</span></span></a></li>
+<li><a href="#orgf41af4b"><span class="timestamp-wrapper"><span class="timestamp">[2019-08-20 Tue]</span></span></a></li>
+<li><a href="#org77a7316"><span class="timestamp-wrapper"><span class="timestamp">[2019-08-13 Tue]</span></span></a></li>
+<li><a href="#org66772b2"><span class="timestamp-wrapper"><span class="timestamp">[2019-08-06 Tue]</span></span></a></li>
+<li><a href="#org3e8bd29"><span class="timestamp-wrapper"><span class="timestamp">[2019-07-30 Tue]</span></span></a></li>
+<li><a href="#orge5897e3"><span class="timestamp-wrapper"><span class="timestamp">[2019-07-16 Tue]</span></span></a></li>
+</ul>
+</li>
+<li><a href="#orgd4a2814">Permanent Links</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0617158" class="outline-2">
+<h2 id="org0617158">Meeting Notes</h2>
+<div class="outline-text-2" id="text-org0617158">
+</div>
+<div id="outline-container-org9996748" class="outline-3">
+<h3 id="org9996748"><span class="timestamp-wrapper"><span class="timestamp">[2020-03-11 Wed]</span></span></h3>
+<div class="outline-text-3" id="text-org9996748">
+<ul class="org-ul">
+<li><a href="rpope/plots/boundary_comp.png">Boundary comparison</a></li>
+<li><a href="rpope/plots/boundary_score.png">Decision function</a> comparison
+<ul class="org-ul">
+<li>For our method, it is fraction of dimensions saying positive</li>
+<li>For SVM, it is the signed distance from boundary in kernel space</li>
+</ul></li>
+<li><a href="rpope/plots/time_comp.png">Time comparison</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7988e41" class="outline-3">
+<h3 id="org7988e41"><span class="timestamp-wrapper"><span class="timestamp">[2020-03-04 Wed]</span></span></h3>
+<div class="outline-text-3" id="text-org7988e41">
+</div>
+<ul class="org-ul">
+<li><a id="org49b86f3"></a>Baseline comparison<br />
+<div class="outline-text-5" id="text-org49b86f3">
+<ul class="org-ul">
+<li>Tried with very few negatives</li>
+<li>Negative Agreement method beats other OC methods (iForest, OCSVM)</li>
+<li>Fails to beat binary classifiers</li>
+<li><a href="rpope/baselines.html">Plots</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org68e4825" class="outline-3">
+<h3 id="org68e4825"><span class="timestamp-wrapper"><span class="timestamp">[2020-02-26 Wed]</span></span></h3>
+<div class="outline-text-3" id="text-org68e4825">
+</div>
+<ul class="org-ul">
+<li><a id="org3a1233b"></a>Ratio Method<br />
+<ul class="org-ul">
+<li><a id="org135ca5e"></a>Issues<br />
+<div class="outline-text-6" id="text-org135ca5e">
+<ul class="org-ul">
+<li>The ratio is unbounded</li>
+<li>Solution
+<ul class="org-ul">
+<li>Normalize the ratio</li>
+<li>Or, do the separate agreements method</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org95dd606"></a><a href="rpope/moon_story.html">Story of Moon Dataset with Ratio method</a><br /></li>
+<li><a id="orge74ed99"></a><a href="rpope/toy_metrics_plots.html">Plots for Gaussian and Moon</a><br /></li>
+</ul>
+</li>
+<li><a id="org87e175c"></a>Negative Agreement Method<br />
+<ul class="org-ul">
+<li><a id="orgb22e7e8"></a><a href="rpope/moon_story_nag.html">Story of Moon Dataset with Negative Agreement method</a><br /></li>
+<li><a id="orgf7a3475"></a><a href="rpope/toy_metrics_nag_plots.html">Plots for Gaussian and Moon</a><br /></li>
+</ul>
+</li>
+<li><a id="org4586ec4"></a><span class="todo TODO">TODO</span> Reduce parameters based on fraction of negatives<br /></li>
+<li><a id="org0191ec0"></a>Comparisons<br />
+<div class="outline-text-5" id="text-org0191ec0">
+<ul class="org-ul">
+<li><a href="rpope/nag_nrl_comp.html">Comparison plots</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7a5396f"></a>Overleaf <a href="https://www.overleaf.com/4611613645txxmmmbhxccf">link</a><br /></li>
+</ul>
+</div>
+<div id="outline-container-org374ba67" class="outline-3">
+<h3 id="org374ba67"><span class="timestamp-wrapper"><span class="timestamp">[2020-02-19 Wed]</span></span></h3>
+<div class="outline-text-3" id="text-org374ba67">
+</div>
+<ul class="org-ul">
+<li><a id="org6e5fc2e"></a>Positive/Negative Agreement method<br />
+<div class="outline-text-5" id="text-org6e5fc2e">
+<ul class="org-ul">
+<li>Separately calculate negative and positive region intervals</li>
+<li>Separate agreement parameters for agreement of both positive and negative points</li>
+<li>For a training point, classify it as positive if:
+<ul class="org-ul">
+<li>The number of dimensions saying it is positive is <b>greater</b> than positive agreement threshold and number of dimensions saying it is negative is <b>less</b> than negative agreement threshold</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb492391"></a>Relational Agreement method<br />
+<div class="outline-text-5" id="text-orgb492391">
+<ul class="org-ul">
+<li>Separately calculate negative and positive region intervals</li>
+<li>Single ratio parameter</li>
+<li>For a training point, classify it as positive if:
+<ul class="org-ul">
+<li>The ratio of (number of dimensions classfying it as negative) to (number of dimensions classfying it as positive) is less than ratio parameter</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orge982c7e"></a><a href="rpope/nag_plots.html">Plots</a><br /></li>
+</ul>
+</div>
+<div id="outline-container-orge343ccf" class="outline-3">
+<h3 id="orge343ccf"><span class="timestamp-wrapper"><span class="timestamp">[2020-02-12 Wed]</span></span></h3>
+<div class="outline-text-3" id="text-orge343ccf">
+</div>
+<ul class="org-ul">
+<li><a id="org6576514"></a><a href="https://docs.google.com/spreadsheets/d/1lR1D0FIRIyiUYX514JOPvI2Kc0nVF0W8-fcQYXhbjY8/edit?usp=sharing">Overview Sheet</a><br /></li>
+<li><a id="org8efee48"></a><a href="rpope/compare_vids.html">Comparisons</a><br /></li>
+</ul>
+</div>
+<div id="outline-container-org020f9c8" class="outline-3">
+<h3 id="org020f9c8"><span class="timestamp-wrapper"><span class="timestamp">[2020-02-05 Wed]</span></span></h3>
+<div class="outline-text-3" id="text-org020f9c8">
+</div>
+<ul class="org-ul">
+<li><a id="orgd0632d8"></a><a href="rpope/docs/_build/index.html">RPOPE Documentation</a><br /></li>
+<li><a id="org98a38fc"></a><a href="rpope/results.html">Results on Gaussian and MNIST</a><br /></li>
+</ul>
+</div>
+<div id="outline-container-org93e4287" class="outline-3">
+<h3 id="org93e4287"><span class="timestamp-wrapper"><span class="timestamp">[2020-01-29 Wed]</span></span></h3>
+<div class="outline-text-3" id="text-org93e4287">
+</div>
+<ul class="org-ul">
+<li><a id="org4c3e61b"></a><a href="RPClassifiers/docs/_build">RPClassifier Documentation</a><br /></li>
+<li><a id="orga687429"></a><a href="RPClassifiers/boundaries.html">Boundary Plots</a><br /></li>
+</ul>
+</div>
+<div id="outline-container-org049955c" class="outline-3">
+<h3 id="org049955c"><span class="timestamp-wrapper"><span class="timestamp">[2020-01-25 Sat]</span></span></h3>
+<div class="outline-text-3" id="text-org049955c">
+</div>
+<ul class="org-ul">
+<li><a id="org084fbe2"></a>Future Work<br />
+<div class="outline-text-5" id="text-org084fbe2">
+<ul class="org-ul">
+<li>Modify FROCC with the ability to exploit small amount of negative examples</li>
+<li>Extend the idea of FROCC to multi-class classification</li>
+<li>Fit gaussian on RP instead of hard boundaries</li>
+<li>Help with implementing FROCC on LBF</li>
+<li>A one class classification model with Bloom filters as data points\(^*\)</li>
+<li>Read <a href="papers/Vempala_A%20Random%20Sampling%20based%20Algorithm%20for%20Learning%20Intersections%20of%20Halfspaces.pdf">Vempala-Random Sampling</a> paper</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org7cf8d27" class="outline-3">
+<h3 id="org7cf8d27"><span class="timestamp-wrapper"><span class="timestamp">[2019-12-17 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-org7cf8d27">
+</div>
+<ul class="org-ul">
+<li><a id="org3cbfa6d"></a>Some recent papers for experiments/comparison/intro<br />
+<div class="outline-text-6" id="text-org3cbfa6d">
+<ul class="org-ul">
+<li>[1] D. Abati, A. Porrello, S. Calderara, and R. Cucchiara, “Latent Space Autoregression for Novelty Detection,” presented at the Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 2019, pp. 481–490.</li>
+<li>[2] P. Perera and V. M. Patel, “Learning Deep Features for One-Class Classification,” IEEE Transactions on Image Processing, vol. 28, no. 11, pp. 5450–5463, Nov. 2019.</li>
+<li>[3] R. Chalapathy, A. K. Menon, and S. Chawla, “Anomaly Detection using One-Class Neural Networks,” arXiv:1802.06360 [cs, stat], Jan. 2019.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org1e75a63" class="outline-3">
+<h3 id="org1e75a63"><span class="timestamp-wrapper"><span class="timestamp">[2019-12-10 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-org1e75a63">
+<ul class="org-ul">
+<li><a href="projections/images/heatmap.html">Heat maps</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org251f609" class="outline-3">
+<h3 id="org251f609"><span class="timestamp-wrapper"><span class="timestamp">[2019-12-09 Mon]</span></span></h3>
+<div class="outline-text-3" id="text-org251f609">
+<ul class="org-ul">
+<li><a href="projections/images/images.html">Diagrams</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge315d5e" class="outline-3">
+<h3 id="orge315d5e"><span class="timestamp-wrapper"><span class="timestamp">[2019-12-05 Thu]</span></span></h3>
+<div class="outline-text-3" id="text-orge315d5e">
+<ul class="org-ul">
+<li><a href="projections/comparisons/eerp_ee_unimode_boundary.png">Unimode Boundaries</a></li>
+<li><a href="projections/comparisons/eerp_ee_multimode_boundary.png">Multimode Boundaries</a></li>
+<li><a href="projections/comparisons/eerp_ee_multimode_comp.png">Comparison with EE</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3d29cbc" class="outline-3">
+<h3 id="org3d29cbc"><span class="timestamp-wrapper"><span class="timestamp">[2019-11-29 Fri]</span></span></h3>
+<div class="outline-text-3" id="text-org3d29cbc">
+</div>
+<ul class="org-ul">
+<li><a id="orgbdbec21"></a><a href="projections/comparisons/uni_multi.html">Comparisons</a> of \(\epsilon RP\) and EE for uni-modal and multi-modal data<br /></li>
+<li><a id="org2f2e6e6"></a><span class="done DONE">DONE</span> Elliptic Envelope in projected dimension<br /></li>
+<li><a id="org4b7c755"></a><span class="todo TODO">TODO</span> Blumenson integration of Elliptic Envelope<br /></li>
+</ul>
+</div>
+<div id="outline-container-org050d9d9" class="outline-3">
+<h3 id="org050d9d9"><span class="timestamp-wrapper"><span class="timestamp">[2019-11-27 Wed]</span></span></h3>
+<div class="outline-text-3" id="text-org050d9d9">
+</div>
+<ul class="org-ul">
+<li><a id="org17b6723"></a>Some papers about EE analysis<br />
+<div class="outline-text-6" id="text-org17b6723">
+<ul class="org-ul">
+<li><a href="ocpapers/orig_mcd.pdf">Original paper</a> (1999)</li>
+<li><a href="ocpapers/outlier_mcd.pdf">Application to outlier detection</a> (2009)</li>
+<li><a href="ocpapers/mcd_extensions.pdf">Extension</a> (2017)</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgfa586b3" class="outline-3">
+<h3 id="orgfa586b3"><span class="timestamp-wrapper"><span class="timestamp">[2019-11-19 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-orgfa586b3">
+</div>
+<ul class="org-ul">
+<li><a id="org93d2d42"></a><a href="projections/Misc/pr.html">PR plot</a><br /></li>
+</ul>
+</div>
+<div id="outline-container-orga14912e" class="outline-3">
+<h3 id="orga14912e"><span class="timestamp-wrapper"><span class="timestamp">[2019-11-16 Sat]</span></span></h3>
+<div class="outline-text-3" id="text-orga14912e">
+</div>
+<ul class="org-ul">
+<li><a id="org54f8d6b"></a><a href="projections/FinalExps/KDD.html">Plots</a> of individual parameters (keeping others fixed)<br /></li>
+</ul>
+</div>
+<div id="outline-container-org7153658" class="outline-3">
+<h3 id="org7153658"><span class="timestamp-wrapper"><span class="timestamp">[2019-11-14 Thu]</span></span></h3>
+<div class="outline-text-3" id="text-org7153658">
+</div>
+<ul class="org-ul">
+<li><a id="org7281455"></a>KDD Data statistics:<br />
+<div class="outline-text-6" id="text-org7281455">
+<ul class="org-ul">
+<li>Data dimension: 41</li>
+<li>Train: 87550</li>
+<li>Test: 19456</li>
+<li>Test split:</li>
+</ul>
+<ul class="org-ul">
+<li>Positive: 9728</li>
+<li>Negative: 9728</li>
+</ul>
+</div>
+</li>
+<li><a id="org8365bfb"></a><a href="projections/FinalExps/kdd_metrics_broad.png">Broad plots</a> on KDD dataset<br />
+<div class="outline-text-6" id="text-org8365bfb">
+<ul class="org-ul">
+<li>Shows the general trend and sensitivity to parameters</li>
+<li>Recall is constantly high for KDD, even with a box threshold of 0.3 (30% data). This means the data is quite closely clustered.</li>
+<li>With 80% and 90% agreement, we see 50% precision. All points are predicted to be <b>inliers</b>.</li>
+</ul>
+</div>
+</li>
+<li><a id="org7c98665"></a><a href="projections/FinalExps/kdd_metrics_broad_abs.png">Plots with absolute agreement dimension</a><br />
+<div class="outline-text-6" id="text-org7c98665">
+<ul class="org-ul">
+<li>Absolute values of agreement threshold means the fraction of dimensions ignored decreases with dimension.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org69b0d9c" class="outline-3">
+<h3 id="org69b0d9c"><span class="timestamp-wrapper"><span class="timestamp">[2019-11-12 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-org69b0d9c">
+</div>
+<ul class="org-ul">
+<li><a id="orgf63076a"></a><a href="projections/circle.html">Analysis of Circle Dataset</a><br /></li>
+<li><a id="org47d5df8"></a>Precision/Recall on real data<br /></li>
+</ul>
+</div>
+<div id="outline-container-org518c5f4" class="outline-3">
+<h3 id="org518c5f4"><span class="timestamp-wrapper"><span class="timestamp">[2019-11-05 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-org518c5f4">
+</div>
+<ul class="org-ul">
+<li><a id="orga7aca5d"></a><a href="http://10.237.23.119:8888">All experiments</a> (with code) [pwd: test]<br /></li>
+<li><a id="org72aa8f4"></a>Elliptic Envelope<br />
+<div class="outline-text-6" id="text-org72aa8f4">
+<p>
+Rousseeuw, P., &amp; Driessen, K.V. (1999). A Fast Algorithm for the Minimum Covariance Determinant Estimator. Technometrics, 41, 212-223.
+</p>
+<ul class="org-ul">
+<li>NOTE: Outlier detection from covariance estimation may break or not perform well in high-dimensional settings. In particular, one will always take care to work with \(n_{samples} > n_{features}^2\)</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgf8fc5e5" class="outline-3">
+<h3 id="orgf8fc5e5"><span class="timestamp-wrapper"><span class="timestamp">[2019-11-04 Mon]</span></span></h3>
+<div class="outline-text-3" id="text-orgf8fc5e5">
+</div>
+<ul class="org-ul">
+<li><a id="org854cfda"></a><a href="projections/cifar.html">CIFAR 100 Results</a><br /></li>
+</ul>
+</div>
+<div id="outline-container-org81e4ef1" class="outline-3">
+<h3 id="org81e4ef1"><span class="timestamp-wrapper"><span class="timestamp">[2019-10-29 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-org81e4ef1">
+</div>
+<ul class="org-ul">
+<li><a id="orgcd11c64"></a><span class="done DONE">DONE</span> &epsilon;-Box RP OCC<br />
+<div class="outline-text-6" id="text-orgcd11c64">
+<ul class="org-ul">
+<li><a href="projections/epsilon_rp.png">Boundaries</a></li>
+<li><a href="projections/results.html">Results </a>on MNIST</li>
+</ul>
+</div>
+</li>
+<li><a id="org70f37b6"></a><span class="done DONE">DONE</span> Kernel Projection OCC<br />
+<div class="outline-text-6" id="text-org70f37b6">
+<ul class="org-ul">
+<li><a href="projections/kernel_boundaries.png">Boundaries</a></li>
+<li><a href="projections/results.html">Results</a> on MNIST</li>
+</ul>
+</div>
+</li>
+<li><a id="org034ee79"></a><span class="done DONE">DONE</span> Comparison of SVM supports with RP vertices<br />
+<div class="outline-text-6" id="text-org034ee79">
+<ul class="org-ul">
+<li><a href="projections/vertices.png">Vertices and supports</a></li>
+<li>Supports: 114, RP vertices: 22, eRP vertices: 32</li>
+<li>Support/RP intersection: 20 (80%)</li>
+<li>Support/eRP intersection: 24 (75%)</li>
+</ul>
+</div>
+</li>
+<li><a id="orge9c8129"></a><span class="todo WAIT">WAIT</span> Handling labelling errors<br /></li>
+<li><a id="org3c9ef91"></a><span class="todo WAIT">WAIT</span> Relationship between kernels and GANs<br /></li>
+</ul>
+</div>
+
+<div id="outline-container-orgc022994" class="outline-3">
+<h3 id="orgc022994"><span class="timestamp-wrapper"><span class="timestamp">[2019-10-22 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-orgc022994">
+<ul class="org-ul">
+<li><a href="projections/results.html">Results</a></li>
+<li><a href="projections/rp.png">Boundaries</a></li>
+<li>CODS-COMAD <a href="https://docs.google.com/document/d/120lDZ0EXjN5RsmcSfZtU1YMnOFu6AD8V9zvxBrB7yqk/edit?usp=sharing">Review</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org27e62d9" class="outline-3">
+<h3 id="org27e62d9"><span class="timestamp-wrapper"><span class="timestamp">[2019-10-15 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-org27e62d9">
+</div>
+<ul class="org-ul">
+<li><a id="org47b97d6"></a><a href="random_kernal/20191008_summary.html">Summary of previous meeting</a><br /></li>
+<li><a id="org464929e"></a><span class="done DONE">DONE</span> Mathemetical analysis of matrices augmented with random values<br /></li>
+<li><a id="org4768849"></a><span class="todo WAIT">WAIT</span> Present math of OCSVM and RFF.<br /></li>
+</ul>
+</div>
+<div id="outline-container-org41474f4" class="outline-3">
+<h3 id="org41474f4"><span class="timestamp-wrapper"><span class="timestamp">[2019-10-08 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-org41474f4">
+<ul class="org-ul">
+<li><a href="random_kernal/oneclassRFF/OCRFF_metrics.html">Results</a> for One Class SVM</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga34208c" class="outline-3">
+<h3 id="orga34208c"><span class="timestamp-wrapper"><span class="timestamp">[2019-10-01 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-orga34208c">
+</div>
+<ul class="org-ul">
+<li><a id="orgb04b1c0"></a>Multi-class classification using one class classifiers<br />
+<ul class="org-ul">
+<li><a id="org730a9f7"></a>Results<br />
+<div class="outline-text-7" id="text-org730a9f7">
+<ul class="org-ul">
+<li>Dataset: iris (<a href="https://archive.ics.uci.edu/ml/datasets/Iris/">https://archive.ics.uci.edu/ml/datasets/Iris/</a>)
+<ul class="org-ul">
+<li>Standard SVM (one-vs-all): train: 99% / test: 94%</li>
+<li>RFFSVM (one-vs-all): 96% / 92%</li>
+<li>OCRFFSVM: 78% / 66%</li>
+</ul></li>
+<li>Dataset: wine (<a href="https://archive.ics.uci.edu/ml/datasets/Wine">https://archive.ics.uci.edu/ml/datasets/Wine</a>)</li>
+</ul>
+<ul class="org-ul">
+<li>Standard SVM (one-vs-all): train: 99% / test: 95%
+<ul class="org-ul">
+<li>RFFSVM (one-vs-all): 99% / 69%</li>
+<li>OCRFFSVM: 58% / 45%</li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org21c1094"></a>Issues with one-class classification (with distance or probability)<br />
+<div class="outline-text-6" id="text-org21c1094">
+
+<div class="figure">
+<p><img src="random_kernal/temp.png" alt="temp.png" />
+</p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org66b2973" class="outline-3">
+<h3 id="org66b2973"><span class="timestamp-wrapper"><span class="timestamp">[2019-09-26 Thu]</span></span></h3>
+<div class="outline-text-3" id="text-org66b2973">
+</div>
+<ul class="org-ul">
+<li><a id="org994f768"></a><a href="random_kernal/oneclassRFF/error_anal.html">Error Analysis</a><br /></li>
+<li><a id="org6c08274"></a>On the usefulness of one-class classifier ensembles for decomposition of multi-class problems <a href="papers/decomposition%20of%20multi-class.pdf">pdf</a><br />
+<div class="outline-text-6" id="text-org6c08274">
+<ul class="org-ul">
+<li>Traditional multi-class solutions: OVO, OVA</li>
+<li>Using OCC for multi-class decomposition: different fusion methods:</li>
+</ul>
+<ul class="org-ul">
+<li>Untrained method:
+<ul class="org-ul">
+<li>Max decision function value (same as ours)</li>
+<li>Pairwise Coupling. Calculating pairwise probability and assigning class with maximum posterior probability</li>
+<li>Conclusions for using OCC for multi-class decomposition:</li>
+</ul></li>
+<li>Not a universal solution. For standard data, binary decomposition is better. For some complex data OCC is &ldquo;worthwhile direction&rdquo;.</li>
+<li>Works very well when high number of classes. OVO has n choose 2 classifiers and OVA suffers from class imbalance.</li>
+<li>Can deal with &ldquo;difficult data&rdquo; better. These include: imbalanced distribution, noisy features and labels, and small amount of data.</li>
+<li>Difference between different OCC models is small. Can use ensembles with different OCC.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgb147930" class="outline-3">
+<h3 id="orgb147930"><span class="timestamp-wrapper"><span class="timestamp">[2019-09-24 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-orgb147930">
+</div>
+<ul class="org-ul">
+<li><a id="org2044de6"></a>Speedup comparisons<br />
+<div class="outline-text-6" id="text-org2044de6">
+<ul class="org-ul">
+<li><a href="random_kernal/oneclassRFF/size_comp.html">Dataset sizes</a></li>
+<li><a href="random_kernal/oneclassRFF/dim_comp.html">Dataset dimension</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org5325423" class="outline-3">
+<h3 id="org5325423"><span class="timestamp-wrapper"><span class="timestamp">[2019-09-17 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-org5325423">
+</div>
+<ul class="org-ul">
+<li><a id="org49edc36"></a>One class RFF<br />
+<div class="outline-text-6" id="text-org49edc36">
+<ul class="org-ul">
+<li><a href="random_kernal/oneclassRFF/oneclassrff.html">Results</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org89a6cde" class="outline-3">
+<h3 id="org89a6cde"><span class="timestamp-wrapper"><span class="timestamp">[2019-09-10 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-org89a6cde">
+</div>
+<ul class="org-ul">
+<li><a id="org0132d56"></a><a href="random_kernal/oneclass.png">Results</a> on one class idea<br />
+<div class="outline-text-6" id="text-org0132d56">
+<ul class="org-ul">
+<li>The shading represents a standard SVM decision boundary.</li>
+<li>The circles are two separate one class SVMs trained on positive and negative data.</li>
+<li>The band in the middle is the region where the points are almost equidistant from each boundary.</li>
+<li>Accuracy of standard SVM = 0.985.</li>
+<li>Accuracy from One class boundaries = 0.932</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org2fed90b" class="outline-3">
+<h3 id="org2fed90b"><span class="timestamp-wrapper"><span class="timestamp">[2019-09-03 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-org2fed90b">
+</div>
+<ul class="org-ul">
+<li><a id="orga9e1fe9"></a>Preliminary <a href="random_kernal/MiscTests.html">results</a> on truncated Gaussian<br /></li>
+<li><a id="org650a7f7"></a><span class="done DONE">DONE</span> Calculate Laplacian block matrices and the modified kernel<br /></li>
+<li><a id="org60cd999"></a><span class="done DONE">DONE</span> Verify that the kernel makes sense by using it in SVM (no random features)<br /></li>
+<li><a id="org7ea979e"></a><span class="todo TODO">TODO</span> Find out how to take integral of complex numbers<br /></li>
+<li><a id="org8648b2e"></a><span class="todo TODO">TODO</span> Find the fourier transform of modified kernel<br /></li>
+<li><a id="org0b8c6cd"></a><span class="todo TODO">TODO</span> Once above step is done, proceed with random features as usual<br /></li>
+</ul>
+</div>
+<div id="outline-container-org03335c6" class="outline-3">
+<h3 id="org03335c6"><span class="timestamp-wrapper"><span class="timestamp">[2019-08-27 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-org03335c6">
+</div>
+<ul class="org-ul">
+<li><a id="org315118c"></a><span class="todo TODO">TODO</span> Read up on Fourier Stieltjes series, and find an interpretation for the underlying inner product<br /></li>
+<li><a id="org553c725"></a><span class="done DONE">DONE</span> Proof that subtracting a threshold value from a kernel results in a kernel. /It&rsquo;s not a ker<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgf41af4b" class="outline-3">
+<h3 id="orgf41af4b"><span class="timestamp-wrapper"><span class="timestamp">[2019-08-20 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-orgf41af4b">
+</div>
+<ul class="org-ul">
+<li><a id="org79eaf3d"></a>Some notes:<br />
+<div class="outline-text-6" id="text-org79eaf3d">
+<ul class="org-ul">
+<li><a href="https://en.wikipedia.org/wiki/Radial_basis_function">Radial basis function</a> is any real valued function whose value depends only on the magnitude of distance of the arguments, i.e. \(\varphi(\mathbf{x}, \mathbf{c}) = \varphi(\|\mathbf{x} - \mathbf{c}\|\))</li>
+</ul>
+</div>
+</li>
+<li><a id="org939f819"></a><span class="done DONE">DONE</span> Kernel matrix that utilizes information in data<br /></li>
+<li><a id="orgad9ed11"></a><span class="done DONE">DONE</span> Regularization with random features<br />
+<div class="outline-text-6" id="text-orgad9ed11">
+<ul class="org-ul">
+<li><a href="papers/Li%20et%20al.%20-%202017%20-%20Learning%20Adaptive%20Random%20Features.pdf">Li et. al. Learning Adaptive Random Features</a> - AAAI 2019 <a href="http://www.cse.iitd.ac.in/~arindam/research/reading.html#orgf66f40f">summary</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge6e4c9d"></a><span class="done DONE">DONE</span> Comparison of random kernels in actual classification task<br />
+<ul class="org-ul">
+<li><a id="org2dbf566"></a><a href="random_kernal/results/Rahimi%20SVM%20Toy%20-%20Jupyter%20Notebook.html">Toy data</a><br />
+<div class="outline-text-7" id="text-org2dbf566">
+<ul class="org-ul">
+<li>Unexpectedly, classification accuracy drops with increase in features. Needs investigation.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd90b7d1"></a>MNIST<br /></li>
+<li><a id="orge5cdadd"></a>KDDCup<br /></li>
+</ul>
+</li>
+<li><a id="orgdcc1b29"></a><span class="done DONE">DONE</span> Port SSDBM submission to overleaf for CODS-COMAD<br />
+<ul class="org-ul">
+<li><a id="orgeb89153"></a><a href="https://www.overleaf.com/5578982979sdymxggwwdjd">Overleaf link</a><br /></li>
+<li><a id="org7b59c8b"></a><a href="https://docs.google.com/document/d/1nmfMcZSYj9p7t8w0Ono4FZux4-Xj99APAVgKvaOxByI/edit?usp=sharing">SSDBM Comments</a><br /></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-org77a7316" class="outline-3">
+<h3 id="org77a7316"><span class="timestamp-wrapper"><span class="timestamp">[2019-08-13 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-org77a7316">
+</div>
+<ul class="org-ul">
+<li><a id="orgee1d25d"></a>Discuss intuition of Fourier feature map<br /></li>
+<li><a id="org1e6349e"></a>Probability bound on closeness of random kernel<br /></li>
+<li><a id="orgc2f9769"></a><span class="done DONE">DONE</span> <a href="random_kernal/Rahimi_1.html">Implementation</a> of Rahimi et. al.&rsquo;s random Fourier features<br /></li>
+<li><a id="org2358ce8"></a><span class="done DONE">DONE</span> <a href="random_kernal/Rahimi_MNIST.html">Implementation</a> on small dataset (mnist)<br /></li>
+<li><a id="org40ac739"></a><span class="done DONE">DONE</span> <a href="random_kernal/Rahimi_KDDCup.html">Implementation</a> on large dataset (KDDCup)<br /></li>
+</ul>
+</div>
+<div id="outline-container-org66772b2" class="outline-3">
+<h3 id="org66772b2"><span class="timestamp-wrapper"><span class="timestamp">[2019-08-06 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-org66772b2">
+<ul class="org-ul">
+<li><a href="random_kernal/email1.html">E-mail discussion</a></li>
+<li><a href="http://www.cse.iitd.ac.in/~arindam/research/reading.html#orga2476bb">Rahimi et. al. (2008) summary</a></li>
+<li><a href="papers/Li%20et%20al.%20-%202018%20-%20Towards%20A%20Unified%20Analysis%20of%20Random%20Fourier%20Features.pdf">Towards A Unified Analysis of Random Fourier Features</a> - ICML 2019
+<ul class="org-ul">
+<li>Areas of previous work (<a href="papers/previous_work.png">clip from slide</a>):
+<ul class="org-ul">
+<li>Approximation error of the kernal (Rahimi, NIPS 2007, Sriperumbudur, NIPS 2015)</li>
+<li>Learning rates for the emperical risk (Avron, ICML 2017)</li>
+<li>Learning rates for the expected risk (Bach, JMLR 2017, Rudi, NIPS 2017, <a href="papers/Sun,%20Gilbert,%20Tewari%20-%202018%20-%20But%20How%20Does%20It%20Work%20in%20Theory%20Linear%20SVM%20with%20Random%20Features.pdf">Sun, NIPS 2018</a>)</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3e8bd29" class="outline-3">
+<h3 id="org3e8bd29"><span class="timestamp-wrapper"><span class="timestamp">[2019-07-30 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-org3e8bd29">
+<ul class="org-ul">
+<li>Papers of interest:
+<ul class="org-ul">
+<li><a href="papers/Li%20et%20al.%20-%202017%20-%20Learning%20Adaptive%20Random%20Features.pdf">Learning Adaptive Random Features</a> - AAAI 2019</li>
+<li><a href="papers/Kawaguchi%20et%20al.%20-%202017%20-%20Deep%20Semi-Random%20Features%20for%20Nonlinear%20Function%20Approximation.pdf">Deep Semi-Random Features for Nonlinear Function Approximation</a> - AAAI 2018</li>
+<li><a href="papers/Sun,%20Gilbert,%20Tewari%20-%202018%20-%20But%20How%20Does%20It%20Work%20in%20Theory%20Linear%20SVM%20with%20Random%20Features.pdf">But How Does It Work in Theory? Linear SVM with Random Features</a> - NIPS 2018</li>
+<li><a href="papers/Ullah%20et%20al.%20-%202018%20-%20Streaming%20Kernel%20PCA%20with%20$tilde{O}(sqrt{n})$%20Random%20Features.pdf">Streaming Kernel PCA with \(\tilde{O}(\sqrt{n})\) Random Features</a> - NIPS 2018</li>
+<li><a href="papers/Carratino,%20Rudi,%20Rosasco%20-%202018%20-%20Learning%20with%20SGD%20and%20Random%20Features.pdf">Learning with SGD and Random Features</a> - NIPS 2018</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge5897e3" class="outline-3">
+<h3 id="orge5897e3"><span class="timestamp-wrapper"><span class="timestamp">[2019-07-16 Tue]</span></span></h3>
+<div class="outline-text-3" id="text-orge5897e3">
+<ul class="org-ul">
+<li>Discussion on what problems are interesting
+<ul class="org-ul">
+<li>Kernal Approximation, Theoritical Neural Network Analysis</li>
+</ul></li>
+<li>Decided to explore Kernal Approximation</li>
+<li>Wait for Akshit and prepare LBF work for CODS-COMAD</li>
+<li>Work with (oversee) undergrad students working on Bloom filters.</li>
+</ul>
+</div>
+
+<ul class="org-ul">
+<li><a id="orgb41e544"></a><span class="done DONE">DONE</span> Read up on Tropp&rsquo;s notes on Kernal Matrix Approximation and Rahimi et. al.&rsquo;s paper<br /></li>
+<li><a id="org2918870"></a><span class="done DONE">DONE</span> Present in next meeting<br /></li>
+<li><a id="org43385ad"></a><span class="done DONE">DONE</span> Trace out the progress/citation of Rahimi et. al.&rsquo;s Random Features for Large Scale Kernel Machines for recent advances and possible problem definitions<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd4a2814" class="outline-2">
+<h2 id="orgd4a2814">Permanent Links</h2>
+<div class="outline-text-2" id="text-orgd4a2814">
+<ul class="org-ul">
+<li><a href="https://docs.google.com/spreadsheets/d/1lR1D0FIRIyiUYX514JOPvI2Kc0nVF0W8-fcQYXhbjY8/edit?usp=sharing">Overview Sheet</a></li>
+<li><a href="RPClassifiers/docs/_build">RPClassifier Documentation</a></li>
+<li>Random Projection Overleaf : <a href="https://www.overleaf.com/3819758946zycxzxjmcwrp">https://www.overleaf.com/3819758946zycxzxjmcwrp</a></li>
+<li>Code Notebooks: <a href="http://10.208.23.134:8889/lab">http://10.208.23.134:8889/lab</a>? (password: test)</li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>

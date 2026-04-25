@@ -1,0 +1,6 @@
+#+OPTIONS: num:nil toc:nil html-postamble:nil
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+#+TITLE: Research
+* [[file:meeting_notes.html][Meeting Notes]]
+* [[file:reading.html][Reading List]]
+* [[file:old_meeting_notes.html][Old Meeting Notes]]

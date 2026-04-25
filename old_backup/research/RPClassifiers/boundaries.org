@@ -1,0 +1,11 @@
+#+OPTIONS: num:nil toc:2 html-postamble:nil
+#+TITLE:Boundary Plots
+#+AUTHOR:Arindam Bhattacharya
+
+#+CAPTION:Gaussian Boundaries: Defaults: target dimensions = 10, search limit = 5, budget factor = 0.1
+#+attr_html: :width 1200px
+[[file:plots/gaussian_boundaries.png]]
+
+#+CAPTION:Moon Boundaries: Defaults: target dimensions = 10, search limit = 5, budget factor = 0.1
+#+attr_html: :width 1200px
+[[file:plots/moon_boundaries.png]]

@@ -1,0 +1,101 @@
+html {
+
+}
+
+body {
+	background-image: url("background2.jpeg");
+	 background-size: cover;
+}
+
+h1 {
+	text-align: left;
+	margin-left: 10%;
+}
+p {
+	/* margin-left: 12%; */
+	margin-right: 10%;
+}
+li {
+	list-style: none;
+}
+img {
+	margin-left: 15%;
+}
+
+a {
+	color: black;
+}
+
+#title {
+}
+
+#title h1 {
+	margin: 0 0 0 0 ;
+	font-size: 96px;
+	text-align: center;
+}
+#title h2 {
+font-size: 36px;
+text-align: center;
+}
+
+#title h4{
+	margin-left: 10%;
+}
+
+#title h5{
+	margin-left: 10%;
+}
+
+#title h3{
+	margin-left: 10%;
+}
+
+.section {
+	background-color: white;
+}
+.section h2 {
+	margin-left: 5%;
+}
+
+.section ul {
+    margin-left: 5%;
+}
+
+.section li {
+	margin-left: 5%;
+	list-style: disc;
+}
+
+.section img {
+	vertical-align: middle;
+}
+
+.tableOfContents {
+	margin-left: 10%;
+	text-align: left;
+}
+
+.navigation {
+	text-align: center;
+}
+
+.texter {
+    margin-left: 10%;
+    display: none;
+}
+.summarybullet {
+    margin-left: 10%;
+}
+
+.texter ol li{
+    list-style: roman;
+}
+
+.texter ul li{
+    list-style: disc;
+}
+
+pre code{
+    margin-right: 20%;
+}
