@@ -1,6 +1,0 @@
-#+title: Classifier Decision Boundary
-#+options: toc:nil html-postamble:nil num:nil
-
-#+caption: Classifier decision boundary comparison
-#+attr_html: :width 1200px
-[[file:classifier_plot_moon.png]]

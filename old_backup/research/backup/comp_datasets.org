@@ -1,8 +1,0 @@
-#+TITLE: Datasets for complexity experiments
-#+OPTIONS: toc:nil html-postamble:nil num:nil
-
-- [[file:gaussian.html][Gaussian]]
-
-- [[file:circles.html][Circles]]
-
-- [[file:moons.html][Moon]]

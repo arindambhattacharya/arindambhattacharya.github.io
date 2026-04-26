@@ -1,5 +1,0 @@
-#+TITLE: Bloom Filter with Classifier
-
-#+CAPTION: Memory and False positive rate comparison of vanilla bloom filter and bloom filter with classifier on top.
-#+NAME:   fig:bloom_clf
-[[file:bloom_clf.png]]
